@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
     <script src="menu-script.js"></script>
 </head>
-<body class="site-background">
+<body class="site-background" onload="ready()">
 <header>
     <h1 id="page-header"> Patryk Barczak </h1>
     <h2 id="header-desc"> Moje projekty </h2>
@@ -32,12 +31,39 @@
 </noscript>
 <main class="content">
     <article>
+        <h2><a class="gray-link" href="https://gitlab.com/Zawodowo/bookie-frontend"> Bookie </a></h2>
+        <p>
+            Aplikacja mobilna skierowana do miłośników książek. Pozwala na wymienianie się pomiędzy użytkownikami książkami,
+            do których już nie wrócą. Jej główną zaletą dla użytkownika jest prostota interfejsu, który przedstawia książki
+            i pozwala na jednoznaczne decyzje "chcę" lub "nie chcę". Aplikacja sama znajduje dopasowania użytkowników, którzy
+            mogą być zainteresowani wymianą między sobą. Aplikacja napisana jest w Kotlinie na system Android.
+            Projekt wykonywany jest w 5-osobowym zespole.
+        </p>
+    </article>
+    <article>
+        <h2><a class="gray-link" href="https://github.com/Piotr2402/AlbAlbCar"> Alb Alb Car </a></h2>
+        <p>
+            Aplikacja webowa umożliwiająca umawianie się na wspólne przejazdy. Pozwala dzielić się kosztami podróży.
+            Baza danych została wykonana w MySQL. Obsługiwana jest przez serwer Spring (Java), w którym zaimplementowano REST API.
+            Z tego API korzysta serwer napisany w PHP obsługujący serwis internetowy. Taka architektura pozwala na stworzenie
+            również aplikacji mobilnej.
+            Projekt wykonywany jest w 4-osobowym zespole.
+        </p>
+    </article>
+    <article>
         <h2><a class="gray-link" href="https://github.com/albi23/Quiz-app"> Quiz App </a></h2>
         <p>
             Gra mobilna na system Android. Napisana w języku Kotlin.
             Jest to quiz, w którym odpowiadamy na pytania zamknięte z wybranej kategorii.
             Oprócz tego, możemy porównywać wyniki ze znajomymi lub dostosywać motyw aplikacji.
             Projekt wykonywany był w zespole 4-osobowym.
+        </p>
+    </article>
+    <article>
+        <h2><a class="gray-link" href="https://github.com/barchuckie/computer-security/tree/master/lab5/bank_python37"> Barchuck Bank </a></h2>
+        <p>
+            Aplikacja webowa imitująca działanie serwisu bankowego. Pozwala na założenie konta, logowanie oraz reset hasła.
+            Główną funkcją jest wykonywanie przelewów. Napisana w Pythonie wykorzystując framework Django.
         </p>
     </article>
     <article>
@@ -48,36 +74,18 @@
             które są dosyć wymagające. Projekt wykonywany w parze.
         </p>
     </article>
-    <article>
-        <h2><a class="gray-link" href="https://github.com/Piotr2402/AlbAlbCar"> Alb Alb Car </a></h2>
-        <p>
-            Aplikacja webowa umożliwiająca umawianie się na wspólne przejazdy. Pozwala dzielić się kosztami podróży.
-            Wykorzystuje różne technologie tj. SQL, Java (Spring) oraz webowe.
-            Projekt wykonywany jest w 4-osobowym zespole.
-        </p>
-        <figure style="width: 100%; overflow-x: auto">
-                <code>
-                    <pre>
-@PostMapping(value = "/remove-ride")
-public Map&lt;String, Object&gt; removeRide(@RequestBody ObjectNode rideData) {
-    int rideId = rideData.findValue("rideId").asInt();
-    String login = rideData.findValue("login").asText();
-    return rideService.removeRide(rideId, login);
-}
-                    </pre>
-                </code>
-        </figure>
-    </article>
     <a class="gray-link" href="https://github.com/barchuckie"> Pozostałe projekty (github.com/barchuckie) </a>
 </main>
 <footer class="my-block">
     <address>
         Patryk Barczak <br>
-        ul. Bp Tomasza I 10/14, <br>
-        50-221 Wrocław <br>
-        +48 721 475 045 <br>
-        <a class="gray-link" href="mailto:244968@student.pwr.edu.pl"> 244968@student.pwr.edu.pl </a> <br>
-        <a class="gray-link" href="mailto:patryk_barczak@wp.pl"> patryk_barczak@wp.pl </a>
+        <a class="gray-link" href="mailto:244968@student.pwr.edu.pl"> 244968 at student.pwr.edu.pl </a> <br>
+        <a class="gray-link" href="mailto:patryk_barczak@wp.pl"> patryk_barczak at wp.pl </a>
+        <p>
+            <a class="gray-link fa fa-2x fa-linkedin-square" href="https://www.linkedin.com/in/barchuckie/"></a>
+            <a class="gray-link fa fa-2x fa-facebook-square" href="https://www.facebook.com/barchuckie" ></a>
+            <a class="gray-link fa fa-2x fa-github-square" href="https://github.com/barchuckie" ></a>
+        </p>
     </address>
 </footer>
 </body>
